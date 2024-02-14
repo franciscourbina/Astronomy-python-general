@@ -50,7 +50,7 @@ def write_spectrum_file(flux, errors, wavelength, final_path):
 
     table_hdu = F.BinTableHDU.from_columns(cols)
     
-    table_hdu.writeto(final_path)
+    table_hdu.writeto(final_path, overwrite=True)
 
 def compute_magnitude():
     """
